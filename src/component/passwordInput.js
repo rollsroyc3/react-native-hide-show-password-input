@@ -40,7 +40,7 @@ export default class PasswordInputText extends React.Component {
     render() {
         return (
             <View>
-                <Input {...this.props}
+                <TextInput {...this.props}
                            secureTextEntry={this.state.password}
                            />
                 <Icon style={styles.icon}
