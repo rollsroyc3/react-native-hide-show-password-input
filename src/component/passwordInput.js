@@ -1,18 +1,16 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {
-    View, 
+    View,
+    TextInput,
     StyleSheet
 } from 'react-native';
-import {
-    TextField
-} from 'react-native-material-textfield';
 
 export default class PasswordInputText extends React.Component {
 
     constructor(props) {
         super(props);
-        
+
         this.state = {
             icEye: 'visibility-off',
             password: true
@@ -42,9 +40,9 @@ export default class PasswordInputText extends React.Component {
     render() {
         return (
             <View>
-                <TextField {...this.props}
+                <Input {...this.props}
                            secureTextEntry={this.state.password}
-                           label="Password"/>
+                           />
                 <Icon style={styles.icon}
                       name={this.state.icEye}
                       size={this.props.iconSize}
@@ -70,4 +68,3 @@ export const styles = StyleSheet.create({
 PasswordInputText.defaultProps = {
 iconSize:25,
 }
-    
