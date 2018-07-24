@@ -33,7 +33,6 @@ export default class PasswordInputText extends React.Component {
 
         // set new state value
         this.setState(newState)
-
     };
 
 
@@ -41,30 +40,27 @@ export default class PasswordInputText extends React.Component {
         return (
             <View>
                 <TextInput {...this.props}
-                           secureTextEntry={this.state.password}
-                           />
+                    secureTextEntry={this.state.password}
+                />
                 <Icon style={styles.icon}
-                      name={this.state.icEye}
-                      size={this.props.iconSize}
-                      color={this.props.iconColor}
-                      onPress={this.changePwdType}
+                    name={this.state.icEye}
+                    size={this.props.iconSize}
+                    color={this.props.iconColor}
+                    onPress={this.changePwdType}
                 />
             </View>
         );
     }
 }
 
-
 export const styles = StyleSheet.create({
-
     icon: {
         position: 'absolute',
-        top: 13,
-        right: 5
+        top: 18,
+        right: 10
     }
-
 });
 
 PasswordInputText.defaultProps = {
-iconSize:25,
+    iconSize:25,
 }
