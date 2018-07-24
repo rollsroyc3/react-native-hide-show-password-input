@@ -56,8 +56,8 @@ export default class PasswordInputText extends React.Component {
 export const styles = StyleSheet.create({
     icon: {
         position: 'absolute',
-        top: 18,
-        right: 10
+        top: 27,
+        right: 25
     }
 });
 
