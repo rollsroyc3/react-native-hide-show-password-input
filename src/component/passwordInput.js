@@ -32,8 +32,7 @@ export default class PasswordInputText extends React.Component {
 
     render() {
         return (
-            <View style={{ width: '100%' }}>
-                <TextInput {...this.props} secureTextEntry={this.state.password} />
+            <View style={styles.container}>
                 <Icon
                     style={styles.icon}
                     name={this.state.icEye}
@@ -41,19 +40,24 @@ export default class PasswordInputText extends React.Component {
                     color={this.props.iconColor}
                     onPress={this.changePwdType}
                 />
+                <TextInput {...this.props} secureTextEntry={this.state.password} />
             </View>
         );
     }
 }
 
 export const styles = StyleSheet.create({
-    icon: {
-        position: 'absolute',
-        top: 27,
-        right: 25,
+    container: {
+        flexDirection: 'row',
+        flex:1,
+        alignItems:"center"
     },
+    icon: {
+        marginHorizontal: 10,
+    }
 });
 
 PasswordInputText.defaultProps = {
     iconSize: 25,
+    alignLeft: false
 };
